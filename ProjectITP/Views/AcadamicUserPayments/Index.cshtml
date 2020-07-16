@@ -1,0 +1,139 @@
+﻿@model IEnumerable<ProjectITP.Models.AcadamicUserPayment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 style="font-family:fantasy">Acadamic User Payments</h1>
+
+<br />
+
+@{
+    double tot = 0;
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create", "AcadamicUserPayments", new { @class = "btn btn-success" })
+</p>
+
+
+<hr />
+
+@Html.ActionLink("Export To Excel", "Reports", new { ReportType = "Excel" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Pdf", "Reports", new { ReportType = "Pdf" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To word", "Reports", new { ReportType = "Word" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Image", "Reports", new { ReportType = "Image" }, new { @class = "btn btn-primary" }) |
+
+<hr />
+
+
+<hr />
+<p>
+    @using (Html.BeginForm())
+    {
+        <table>
+            <tr class="bg-primary">
+                <th>Year</th>
+                <th>Month</th>
+                <th>Check</th>
+            </tr>
+            <tr>
+                <td> @Html.Editor("Year", new { htmlAttributes = new { @class = "form-control", Type = "integer" } })</td>
+                <td> @Html.Editor("Month", new { htmlAttributes = new { @class = "form-control", Type = "integer" } })</td>
+                <td><input type="submit" value="See Results" class="btn btn-default" /></td>
+            </tr>
+        </table>
+
+
+    }
+</p>
+
+<hr />
+
+
+
+<table id="acadamicPayment" class="table table-hover table-bordered ">
+    <thead>
+        <tr class="bg-primary" >
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Month)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeacherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdNumber)
+            </th>
+            <th></th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr  >
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Month)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Payment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeacherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdNumber)
+                </td>
+
+                @{
+                    tot = tot + item.Payment;
+                }
+
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id },  new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<table class="table">
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Total Price :</th>
+        <th>Rs : @Html.DisplayFor(x => tot) </th>
+    </tr>
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#acadamicPayment").DataTable();
+
+        });
+    </script>
+
+
+}
+

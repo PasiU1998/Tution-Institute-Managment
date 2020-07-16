@@ -1,0 +1,83 @@
+﻿@model ProjectITP.Models.UtilityBills
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UtilityBills</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.billNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.billNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.billType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.billType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id },  new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-primary" })
+</p>

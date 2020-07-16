@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ProjectITP.Models.Classroom>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-family:fantasy">Classroom</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Classroom", new { @class = "btn btn-success" })
+</p>
+
+
+<hr />
+
+@Html.ActionLink("Export To Excel", "Reports", new { ReportType = "Excel" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Pdf", "Reports", new { ReportType = "Pdf" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To word", "Reports", new { ReportType = "Word" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Image", "Reports", new { ReportType = "Image" }, new { @class = "btn btn-primary" }) |
+
+<hr />
+
+
+<table id="Classroom" class="table table-hover table-bordered">
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.className)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.building)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.floor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.capasity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th></th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.className)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.building)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.floor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.capasity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#Classroom").DataTable();
+
+        });
+    </script>
+
+
+}
+

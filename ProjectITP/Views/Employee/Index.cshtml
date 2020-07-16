@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+
+
+
+<table class="table_style">
+
+    <tr>
+
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("AcadamicUser","Account")'" class="admin_dashboard">Acadamic Employee</button>
+                </p>
+            </div>
+        </td>
+
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index", "NonAcadamicEmployees")'" class="admin_dashboard">Non-Acadamic Employee</button>
+                </p>
+            </div>
+        </td>
+
+    </tr>
+
+
+</table>

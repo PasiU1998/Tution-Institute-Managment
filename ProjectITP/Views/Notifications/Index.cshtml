@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ProjectITP.Models.Notification>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-family:fantasy">Student Notifications</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Notifications", new { @class = "btn btn-success" })
+</p>
+<table id="Notifications" class="table table-hover table-bordered">
+    <thead>
+        <tr  class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#Notifications").DataTable();
+
+        });
+    </script>
+
+
+}

@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ProjectITP.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-family:fantasy">Exams</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Exams", new { @class = "btn btn-success" })
+</p>
+
+<hr />
+
+@Html.ActionLink("Export To Excel", "Reports", new { ReportType = "Excel" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Pdf", "Reports", new { ReportType = "Pdf" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To word", "Reports", new { ReportType = "Word" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Image", "Reports", new { ReportType = "Image" }, new { @class = "btn btn-primary" }) |
+
+<hr />
+
+
+<table id="exam" class="table table-hover table-bordered">
+
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.ExamType.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExamType.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject.enrollmentKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#exam").DataTable();
+
+        });
+    </script>
+
+
+}

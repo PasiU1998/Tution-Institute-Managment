@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-family:fantasy">Finance Managment</h2>
+
+
+
+<center>
+<table class="table_style">
+    <tr>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","SubjectFees")'" class="admin_dashboard">Fee of subject</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","UtilityBills")'" class="admin_dashboard">Utility Managment</button>
+                </p>
+            </div>
+        </td>
+
+        
+
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","AcadamicUserPayments")'" class="admin_dashboard">Acadamic Payment Managment</button>
+                </p>
+            </div>
+        </td>
+
+    </tr>
+    <tr>
+
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","NonAcadamicPayments")'" class="admin_dashboard">Non Acadamic Payment Managment</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","Profits")'" class="admin_dashboard">Profit Managment </button>
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>
+</center>

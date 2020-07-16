@@ -1,0 +1,59 @@
+﻿@model ProjectITP.Models.Classroom
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Classroom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.className)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.className)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.building)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.building)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.floor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.floor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.capasity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capasity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-primary" })
+</p>

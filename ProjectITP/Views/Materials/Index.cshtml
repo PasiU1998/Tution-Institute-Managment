@@ -1,0 +1,94 @@
+﻿@model IEnumerable<ProjectITP.Models.Material>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 style="font-family:fantasy">Home For Material</h1>
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Materials", new { @class = "btn btn-success" })
+</p>
+
+<hr />
+
+@Html.ActionLink("Export To Excel", "Reports", new { ReportType = "Excel" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Pdf", "Reports", new { ReportType = "Pdf" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To word", "Reports", new { ReportType = "Word" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Image", "Reports", new { ReportType = "Image" }, new { @class = "btn btn-primary" }) |
+
+<hr />
+
+
+<table id="material" class="table table-hover table-bordered">
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.MaterialTypes.type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teacher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.materialURL)
+            </th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaterialTypes.type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject.enrollmentKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.teacher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.quantity)
+                </td>
+                <td>
+                    <a href="~/Images/@item.materialURL"> @Html.DisplayFor(modelItem => item.materialURL)</a>
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#material").DataTable();
+
+        });
+    </script>
+
+
+}
+

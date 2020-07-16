@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            <li><img src="data1/images/rs9466_2013_10_29_fall_sunrise_around_coe_complex_1440x400.jpg" alt="rs9466_2013_10_29_fall_sunrise_around_coe_complex_1440x400" title="rs9466_2013_10_29_fall_sunrise_around_coe_complex_1440x400" id="wows1_0" /></li>
+            <li><img src="data1/images/image4.jpg" alt="image4" title="image4" id="wows1_1" /></li>
+            <li><img src="data1/images/social_image.jpg" alt="social_image" title="social_image" id="wows1_2" /></li>
+            <li><a href="http://wowslider.net"><img src="data1/images/systemicevaluation.jpg" alt="slideshow javascript" title="systemic-evaluation" id="wows1_3" /></a></li>
+            <li><img src="data1/images/collegestudentsstudyingonlawnclassmatesuniversity1068x713.jpg" alt="college-students-studying-on-lawn-classmates-university-1068x713" title="college-students-studying-on-lawn-classmates-university-1068x713" id="wows1_4" /></li>
+        </ul>
+    </div>
+    <div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">bootstrap carousel example</a> by WOWSlider.com v8.8</div>
+    <div class="ws_shadow"></div>
+</div>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+
+<br />
+
+@Html.ActionLink("Admin Dashboard", "AdminDashboard", "Home", new { @class = "btn btn-primary" })
+
+<br />
+
+<div class="row" style=" padding-left :2%">
+    <div class="col-md-4">
+        <h2 style="text-align:center ;font-family:fantasy">Scholarships </h2>
+        <br />
+        <div style="background-color:red;height:200px;width:350px">
+            <img src="~/Images/s_image2.jpg" alt="Smiley face" height="200px" width="350px">
+
+        </div>
+        <br />
+
+        <p><a class="btn btn-primary" onclick="location.href ='@Url.Action("Index","Subjects")'">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2 style="text-align:center;font-family:fantasy">Advance Level</h2>
+        <br />
+        <div style="background-color:red;height:200px;width:350px">
+            <img src="~/Images/advance_image2.jpg" alt="Smiley face" height="200px" width="350px">
+
+        </div>
+        <br />
+        <p><a class="btn btn-primary" onclick="location.href ='@Url.Action("Index","Subjects")'">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2 style="text-align:center;font-family:fantasy">Ordinary Level</h2>
+        <br />
+        <div style="background-color:red;height:200px;width:350px">
+            <img src="~/Images/ordinary_image2.jpg" alt="Smiley face" height="200px" width="350px">
+
+        </div>
+        <br />
+        <p><a class="btn btn-primary" onclick="location.href ='@Url.Action("Index","Subjects")'" ">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+
+<hr style="border-top: 3px solid #eee">
+
+
+
+
+

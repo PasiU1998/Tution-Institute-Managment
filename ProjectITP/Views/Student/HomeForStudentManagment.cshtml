@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "HomeForStudentManagment";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-family:fantasy">Student Managment</h2>
+
+
+
+<center>
+    <table class="table_style">
+        <tr>
+            <td>
+                <div class="admin_dashboard">
+                    <p>
+                        <button type="button" onclick="location.href ='@Url.Action("StudentUser","Account")'" class="admin_dashboard">Students</button>
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div class="admin_dashboard">
+                    <p>
+                        <button type="button" onclick="location.href ='@Url.Action("Index","Notifications")'" class="admin_dashboard">Notifications</button>
+                    </p>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+</center>

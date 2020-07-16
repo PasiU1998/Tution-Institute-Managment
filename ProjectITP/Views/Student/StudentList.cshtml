@@ -1,0 +1,59 @@
+﻿
+@model List<ProjectITP.Models.RegisterViewModel>
+
+
+@{
+    ViewBag.Title = "StudentList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Students</h2>
+
+
+<li>@Html.ActionLink("Register New Student", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+
+
+<table id="customers" class="table table-hover table-bordered">
+
+    <thead>
+        <tr>
+            <th>Customers</th>
+            <th>Membership Type</th>
+            <th>Delete</th>
+        </tr>
+
+
+
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var  user in Model)
+
+        {
+
+            
+
+
+
+            <tr>
+                <td> @Html.ActionLink(user.Name, "Edit", new { id = user }) </td>
+                <td>@user.TelephoneNumber</td>
+              @*  <td>
+                    <button data-customer-id="@" class="btn btn-link js-delete">Delete</button>
+                </td> *@
+
+            </tr>
+
+
+
+        }
+
+    </tbody>
+
+
+</table>
+
+
+

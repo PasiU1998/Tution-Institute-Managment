@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ProjectITP.Models.ExamResult>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2 style="font-family:fantasy">Exam Result</h2>
+
+
+<table id="ExamResult" class="table table-hover table-bordered">
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resultpdf)
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject.enrollmentKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    <a href="~/Images/@item.Resultpdf">@Html.DisplayFor(modelItem => item.Resultpdf)</a>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#ExamResult").DataTable();
+
+        });
+    </script>
+
+
+}

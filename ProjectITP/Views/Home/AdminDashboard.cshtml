@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "AdminDashboard";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Admin Dashboard</h2>
+
+
+
+
+
+
+
+
+<center>
+<table class="table_style">
+    <tr>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","Employee")'" class="admin_dashboard">Employee Management</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","Subjects")'" class="admin_dashboard">Subject Management</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","ExamManagemnt")'" class="admin_dashboard">Exam Management</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("HomeForStudentManagment","Student")'" class="admin_dashboard">Student Management</button>
+                </p>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","TimeTables")'" class="admin_dashboard">Time Table Management</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","Materials")'" class="admin_dashboard">Tute And Leaflet Management</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","Classrooms")'" class="admin_dashboard">Class Room Management</button>
+                </p>
+            </div>
+        </td>
+        <td>
+            <div class="admin_dashboard">
+                <p>
+                    <button type="button" onclick="location.href ='@Url.Action("Index","Finance")'" class="admin_dashboard">Finance Management</button>
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>
+</center>

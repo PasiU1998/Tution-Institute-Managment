@@ -1,0 +1,142 @@
+﻿@model IEnumerable<ProjectITP.Models.Exam>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2 style="font-family:fantasy">Exams</h2>
+
+
+<hr />
+
+<h1>MCQ</h1>
+
+<hr />
+
+<table id="exam" class="table table-hover table-bordered">
+
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.ExamType.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.ExamType.Id == 1)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExamType.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject.enrollmentKey)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+<hr />
+
+<h1>Written</h1>
+
+<hr />
+
+<table id="exam1" class="table table-hover table-bordered">
+
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.ExamType.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.ExamType.Id == 2)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExamType.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject.enrollmentKey)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#exam").DataTable();
+            var table = $("#exam1").DataTable();
+
+        });
+    </script>
+
+
+}

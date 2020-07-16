@@ -1,0 +1,75 @@
+﻿@model ProjectITP.Models.Profit
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Profit</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeacherPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NonAcadamicPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NonAcadamicPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UtilityPayment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UtilityPayment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Others)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Others)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlyIncome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlyIncome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id },  new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-primary" })
+</p>

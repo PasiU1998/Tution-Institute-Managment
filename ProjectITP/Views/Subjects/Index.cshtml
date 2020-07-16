@@ -1,0 +1,101 @@
+﻿@model IEnumerable<ProjectITP.Models.Subject>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-family:fantasy">Subjects</h2>
+
+
+@Html.ActionLink("Create New", "Create", "Subjects", new { @class = "btn btn-success" })
+
+
+
+<hr />
+
+@Html.ActionLink("Export To Excel", "Reports", new { ReportType = "Excel" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Pdf", "Reports", new { ReportType = "Pdf" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To word", "Reports", new { ReportType = "Word" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Image", "Reports", new { ReportType = "Image" }, new { @class = "btn btn-primary" }) |
+
+<hr />
+
+
+
+<table id="subjects" class="table table-hover table-bordered">
+
+
+    <thead >
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.grade)
+            </th>
+            <th>
+                Teacher's Name
+            </th>
+            <th>
+                Subject Category
+            </th>
+            <th>
+                Teacher's Id
+            </th>
+            <th></th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.enrollmentKey)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubjectCategory.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.Id)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#subjects").DataTable();
+
+        });
+    </script>
+
+
+}
+

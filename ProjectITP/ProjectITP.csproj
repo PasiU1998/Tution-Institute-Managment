@@ -1,0 +1,1452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8457FAE-B869-41A7-B8C2-A6A9ADAC3B84}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectITP</RootNamespace>
+    <AssemblyName>ProjectITP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AcadamicUserPaymentsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClassroomsController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\ExamManagemntController.cs" />
+    <Compile Include="Controllers\ExamResultsController.cs" />
+    <Compile Include="Controllers\ExamsController.cs" />
+    <Compile Include="Controllers\FinanceController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MaterialsController.cs" />
+    <Compile Include="Controllers\NonAcadamicEmployeesController.cs" />
+    <Compile Include="Controllers\NonAcadamicPaymentsController.cs" />
+    <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Controllers\ProfitsController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\SubjectFeesController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
+    <Compile Include="Controllers\TimeTablesController.cs" />
+    <Compile Include="Controllers\UtilityBillsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908121209329_InitialCreate.cs" />
+    <Compile Include="Migrations\201908121209329_InitialCreate.Designer.cs">
+      <DependentUpon>201908121209329_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908121218029_seedUsers.cs" />
+    <Compile Include="Migrations\201908121218029_seedUsers.Designer.cs">
+      <DependentUpon>201908121218029_seedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908121915502_AddIsNameToUser.cs" />
+    <Compile Include="Migrations\201908121915502_AddIsNameToUser.Designer.cs">
+      <DependentUpon>201908121915502_AddIsNameToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908150652010_AddIsUserTypeModel.cs" />
+    <Compile Include="Migrations\201908150652010_AddIsUserTypeModel.Designer.cs">
+      <DependentUpon>201908150652010_AddIsUserTypeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908150657267_AddIsUserIdToUser.cs" />
+    <Compile Include="Migrations\201908150657267_AddIsUserIdToUser.Designer.cs">
+      <DependentUpon>201908150657267_AddIsUserIdToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908150723194_AddIsTelephoneNumberAndAddressToIdentityModel.cs" />
+    <Compile Include="Migrations\201908150723194_AddIsTelephoneNumberAndAddressToIdentityModel.Designer.cs">
+      <DependentUpon>201908150723194_AddIsTelephoneNumberAndAddressToIdentityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908150733500_SeedUserTypes.cs" />
+    <Compile Include="Migrations\201908150733500_SeedUserTypes.Designer.cs">
+      <DependentUpon>201908150733500_SeedUserTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908150853440_AddIsRequiredToUserTypeId.cs" />
+    <Compile Include="Migrations\201908150853440_AddIsRequiredToUserTypeId.Designer.cs">
+      <DependentUpon>201908150853440_AddIsRequiredToUserTypeId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908150858434_seedUserTable.cs" />
+    <Compile Include="Migrations\201908150858434_seedUserTable.Designer.cs">
+      <DependentUpon>201908150858434_seedUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908151025422_RemovingUserTypesFromIdintityModel.cs" />
+    <Compile Include="Migrations\201908151025422_RemovingUserTypesFromIdintityModel.Designer.cs">
+      <DependentUpon>201908151025422_RemovingUserTypesFromIdintityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908151028563_AddingUserTypesFromIdintityModel.cs" />
+    <Compile Include="Migrations\201908151028563_AddingUserTypesFromIdintityModel.Designer.cs">
+      <DependentUpon>201908151028563_AddingUserTypesFromIdintityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908151031046_AddingUserTypesFromIdintityModel1.cs" />
+    <Compile Include="Migrations\201908151031046_AddingUserTypesFromIdintityModel1.Designer.cs">
+      <DependentUpon>201908151031046_AddingUserTypesFromIdintityModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908162058400_AddIsUserIdToUser1.cs" />
+    <Compile Include="Migrations\201908162058400_AddIsUserIdToUser1.Designer.cs">
+      <DependentUpon>201908162058400_AddIsUserIdToUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908162134409_AddIsUserIdToUser2.cs" />
+    <Compile Include="Migrations\201908162134409_AddIsUserIdToUser2.Designer.cs">
+      <DependentUpon>201908162134409_AddIsUserIdToUser2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908162136205_Add.cs" />
+    <Compile Include="Migrations\201908162136205_Add.Designer.cs">
+      <DependentUpon>201908162136205_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908171300251_AddIsDone.cs" />
+    <Compile Include="Migrations\201908171300251_AddIsDone.Designer.cs">
+      <DependentUpon>201908171300251_AddIsDone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908171642053_test.cs" />
+    <Compile Include="Migrations\201908171642053_test.Designer.cs">
+      <DependentUpon>201908171642053_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908171754482_AddIsUserTypesToIdentityModel.cs" />
+    <Compile Include="Migrations\201908171754482_AddIsUserTypesToIdentityModel.Designer.cs">
+      <DependentUpon>201908171754482_AddIsUserTypesToIdentityModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908251247052_addIsSubjectModel.cs" />
+    <Compile Include="Migrations\201908251247052_addIsSubjectModel.Designer.cs">
+      <DependentUpon>201908251247052_addIsSubjectModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908281249531_AddIsSubjectFeeModel.cs" />
+    <Compile Include="Migrations\201908281249531_AddIsSubjectFeeModel.Designer.cs">
+      <DependentUpon>201908281249531_AddIsSubjectFeeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908282209205_AddMaterialTypeModel.cs" />
+    <Compile Include="Migrations\201908282209205_AddMaterialTypeModel.Designer.cs">
+      <DependentUpon>201908282209205_AddMaterialTypeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291227056_AddIsRequiredAnootationsToSubjectModel.cs" />
+    <Compile Include="Migrations\201908291227056_AddIsRequiredAnootationsToSubjectModel.Designer.cs">
+      <DependentUpon>201908291227056_AddIsRequiredAnootationsToSubjectModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291306148_AddIsRegularExperssionForEnrolmentKeyInSubject.cs" />
+    <Compile Include="Migrations\201908291306148_AddIsRegularExperssionForEnrolmentKeyInSubject.Designer.cs">
+      <DependentUpon>201908291306148_AddIsRegularExperssionForEnrolmentKeyInSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291320020_AddIsDataAnotationsToSubjectModel.cs" />
+    <Compile Include="Migrations\201908291320020_AddIsDataAnotationsToSubjectModel.Designer.cs">
+      <DependentUpon>201908291320020_AddIsDataAnotationsToSubjectModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908271128463_AddChanurisClass.cs" />
+    <Compile Include="Migrations\201908271128463_AddChanurisClass.Designer.cs">
+      <DependentUpon>201908271128463_AddChanurisClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291526029_29th 1st correction is done.cs" />
+    <Compile Include="Migrations\201908291526029_29th 1st correction is done.Designer.cs">
+      <DependentUpon>201908291526029_29th 1st correction is done.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291536579_RemoveRegularExperssionForSubject.cs" />
+    <Compile Include="Migrations\201908291536579_RemoveRegularExperssionForSubject.Designer.cs">
+      <DependentUpon>201908291536579_RemoveRegularExperssionForSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291650253_AddIsNonAcadamicModel.cs" />
+    <Compile Include="Migrations\201908291650253_AddIsNonAcadamicModel.Designer.cs">
+      <DependentUpon>201908291650253_AddIsNonAcadamicModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291701483_AddIsModifiedTimeTable.cs" />
+    <Compile Include="Migrations\201908291701483_AddIsModifiedTimeTable.Designer.cs">
+      <DependentUpon>201908291701483_AddIsModifiedTimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291741202_addIsClassroomModel.cs" />
+    <Compile Include="Migrations\201908291741202_addIsClassroomModel.Designer.cs">
+      <DependentUpon>201908291741202_addIsClassroomModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291750178_addIsUtilityBillsModel.cs" />
+    <Compile Include="Migrations\201908291750178_addIsUtilityBillsModel.Designer.cs">
+      <DependentUpon>201908291750178_addIsUtilityBillsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908291925292_addIsRequiredToAllTheAttibutesInAllModels.cs" />
+    <Compile Include="Migrations\201908291925292_addIsRequiredToAllTheAttibutesInAllModels.Designer.cs">
+      <DependentUpon>201908291925292_addIsRequiredToAllTheAttibutesInAllModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909030811437_DeleteTheExamClass.cs" />
+    <Compile Include="Migrations\201909030811437_DeleteTheExamClass.Designer.cs">
+      <DependentUpon>201909030811437_DeleteTheExamClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909030837575_addIsSubjectCategoryModel.cs" />
+    <Compile Include="Migrations\201909030837575_addIsSubjectCategoryModel.Designer.cs">
+      <DependentUpon>201909030837575_addIsSubjectCategoryModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909030911201_AddExamModel.cs" />
+    <Compile Include="Migrations\201909030911201_AddExamModel.Designer.cs">
+      <DependentUpon>201909030911201_AddExamModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909031153392_removeMaterialModel.cs" />
+    <Compile Include="Migrations\201909031153392_removeMaterialModel.Designer.cs">
+      <DependentUpon>201909031153392_removeMaterialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909031156287_AddMaterialModel2ndTime.cs" />
+    <Compile Include="Migrations\201909031156287_AddMaterialModel2ndTime.Designer.cs">
+      <DependentUpon>201909031156287_AddMaterialModel2ndTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909031725230_AddIsSubjectTypeAndApplicationUserModelToSubject.cs" />
+    <Compile Include="Migrations\201909031725230_AddIsSubjectTypeAndApplicationUserModelToSubject.Designer.cs">
+      <DependentUpon>201909031725230_AddIsSubjectTypeAndApplicationUserModelToSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909031904443_updateSubjectFeeModel.cs" />
+    <Compile Include="Migrations\201909031904443_updateSubjectFeeModel.Designer.cs">
+      <DependentUpon>201909031904443_updateSubjectFeeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909040751487_removeTeacherNameFromSubject.cs" />
+    <Compile Include="Migrations\201909040751487_removeTeacherNameFromSubject.Designer.cs">
+      <DependentUpon>201909040751487_removeTeacherNameFromSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909040951597_removeRequiredOptionfromTimeTableModel.cs" />
+    <Compile Include="Migrations\201909040951597_removeRequiredOptionfromTimeTableModel.Designer.cs">
+      <DependentUpon>201909040951597_removeRequiredOptionfromTimeTableModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909042040025_AddIsStudentSubjectEnrollmentModel.cs" />
+    <Compile Include="Migrations\201909042040025_AddIsStudentSubjectEnrollmentModel.Designer.cs">
+      <DependentUpon>201909042040025_AddIsStudentSubjectEnrollmentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909042045126_AddIsRemoveApplicationUserFromStudentSubjectEnrollmentModel.cs" />
+    <Compile Include="Migrations\201909042045126_AddIsRemoveApplicationUserFromStudentSubjectEnrollmentModel.Designer.cs">
+      <DependentUpon>201909042045126_AddIsRemoveApplicationUserFromStudentSubjectEnrollmentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909050655012_AddIsAllSetToPushToBackUpSajeewa.cs" />
+    <Compile Include="Migrations\201909050655012_AddIsAllSetToPushToBackUpSajeewa.Designer.cs">
+      <DependentUpon>201909050655012_AddIsAllSetToPushToBackUpSajeewa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909240953348_AddIsMonthAndYearPropertiesToUtilityBillsModel.cs" />
+    <Compile Include="Migrations\201909240953348_AddIsMonthAndYearPropertiesToUtilityBillsModel.Designer.cs">
+      <DependentUpon>201909240953348_AddIsMonthAndYearPropertiesToUtilityBillsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241125174_AddIsAcadamicUserPaymentModel.cs" />
+    <Compile Include="Migrations\201909241125174_AddIsAcadamicUserPaymentModel.Designer.cs">
+      <DependentUpon>201909241125174_AddIsAcadamicUserPaymentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241128523_changeAcadamicUserPaymnetModel.cs" />
+    <Compile Include="Migrations\201909241128523_changeAcadamicUserPaymnetModel.Designer.cs">
+      <DependentUpon>201909241128523_changeAcadamicUserPaymnetModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241132327_RemoveRequiredIdFromAcadamicUserPaymnetModel.cs" />
+    <Compile Include="Migrations\201909241132327_RemoveRequiredIdFromAcadamicUserPaymnetModel.Designer.cs">
+      <DependentUpon>201909241132327_RemoveRequiredIdFromAcadamicUserPaymnetModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241137536_AddNonAcadamicPaymentModel.cs" />
+    <Compile Include="Migrations\201909241137536_AddNonAcadamicPaymentModel.Designer.cs">
+      <DependentUpon>201909241137536_AddNonAcadamicPaymentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241140224_AddPaymentAttributeToNonAcadamicPaymentModel.cs" />
+    <Compile Include="Migrations\201909241140224_AddPaymentAttributeToNonAcadamicPaymentModel.Designer.cs">
+      <DependentUpon>201909241140224_AddPaymentAttributeToNonAcadamicPaymentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241204330_ChangePaymentDataTypeToDoubleInAcadamicUserPaymment.cs" />
+    <Compile Include="Migrations\201909241204330_ChangePaymentDataTypeToDoubleInAcadamicUserPaymment.Designer.cs">
+      <DependentUpon>201909241204330_ChangePaymentDataTypeToDoubleInAcadamicUserPaymment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241208479_RemoveApllicationUserForeignKeyFromAcadamicUserPaymentModel.cs" />
+    <Compile Include="Migrations\201909241208479_RemoveApllicationUserForeignKeyFromAcadamicUserPaymentModel.Designer.cs">
+      <DependentUpon>201909241208479_RemoveApllicationUserForeignKeyFromAcadamicUserPaymentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241213118_AgainAddApllicationUserForeignKeyToAcadamicUserPaymentModel.cs" />
+    <Compile Include="Migrations\201909241213118_AgainAddApllicationUserForeignKeyToAcadamicUserPaymentModel.Designer.cs">
+      <DependentUpon>201909241213118_AgainAddApllicationUserForeignKeyToAcadamicUserPaymentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241238216_FinalAcadamicEmployeePaymentModel.cs" />
+    <Compile Include="Migrations\201909241238216_FinalAcadamicEmployeePaymentModel.Designer.cs">
+      <DependentUpon>201909241238216_FinalAcadamicEmployeePaymentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241557392_AddProfitModel.cs" />
+    <Compile Include="Migrations\201909241557392_AddProfitModel.Designer.cs">
+      <DependentUpon>201909241557392_AddProfitModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909241615414_AddMonthlyIncomeProprtyToProfitModel.cs" />
+    <Compile Include="Migrations\201909241615414_AddMonthlyIncomeProprtyToProfitModel.Designer.cs">
+      <DependentUpon>201909241615414_AddMonthlyIncomeProprtyToProfitModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909251600243_CreateExamResultModel.cs" />
+    <Compile Include="Migrations\201909251600243_CreateExamResultModel.Designer.cs">
+      <DependentUpon>201909251600243_CreateExamResultModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909251731228_AddNotificationModel.cs" />
+    <Compile Include="Migrations\201909251731228_AddNotificationModel.Designer.cs">
+      <DependentUpon>201909251731228_AddNotificationModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909260607366_AddValidationToExamResultsModel.cs" />
+    <Compile Include="Migrations\201909260607366_AddValidationToExamResultsModel.Designer.cs">
+      <DependentUpon>201909260607366_AddValidationToExamResultsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909260611217_removeRequiredFromResultPdfOfExamResultModel.cs" />
+    <Compile Include="Migrations\201909260611217_removeRequiredFromResultPdfOfExamResultModel.Designer.cs">
+      <DependentUpon>201909260611217_removeRequiredFromResultPdfOfExamResultModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909260619211_AddValidationToNonAcadamicPaymentsModel.cs" />
+    <Compile Include="Migrations\201909260619211_AddValidationToNonAcadamicPaymentsModel.Designer.cs">
+      <DependentUpon>201909260619211_AddValidationToNonAcadamicPaymentsModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909260626151_AddValidationToExamModel.cs" />
+    <Compile Include="Migrations\201909260626151_AddValidationToExamModel.Designer.cs">
+      <DependentUpon>201909260626151_AddValidationToExamModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911271814459_startnew.cs" />
+    <Compile Include="Migrations\201911271814459_startnew.Designer.cs">
+      <DependentUpon>201911271814459_startnew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AcadamicUserPayment.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Classroom.cs" />
+    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\ExamResult.cs" />
+    <Compile Include="Models\ExamType.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Material.cs" />
+    <Compile Include="Models\MaterialTypes.cs" />
+    <Compile Include="Models\NonAcadamicEmployee.cs" />
+    <Compile Include="Models\NonAcadamicPayment.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\Profit.cs" />
+    <Compile Include="Models\RoleName.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentSubjectEnrollment.cs" />
+    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\SubjectCategory.cs" />
+    <Compile Include="Models\SubjectFee.cs" />
+    <Compile Include="Models\TimeTable.cs" />
+    <Compile Include="Models\UserTypes.cs" />
+    <Compile Include="Models\UtilityBills.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\UserCustomViewModel.cs" />
+    <Compile Include="_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820ClassroomDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ClassroomDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820ExamDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ExamDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820ExamResultDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ExamResultDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820ProfitDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ProfitDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820StudentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820StudentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820SubjectDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820SubjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820TimeTableDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820TimeTableDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_aspnet_ProjectITP_20190812023820UtilityDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_aspnet_ProjectITP_20190812023820UtilityDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.xml" />
+    <Content Include="bin\Microsoft.Owin.Security.xml" />
+    <Content Include="bin\Microsoft.Owin.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\ProjectITP.dll" />
+    <Content Include="bin\ProjectITP.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.min.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.min.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.min.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\select.foundation.css" />
+    <Content Include="Content\DataTables\css\select.foundation.min.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.min.css" />
+    <Content Include="Content\DataTables\images\details_close.png" />
+    <Content Include="Content\DataTables\images\details_open.png" />
+    <Content Include="Content\DataTables\images\sort_asc.png" />
+    <Content Include="Content\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables\images\sort_both.png" />
+    <Content Include="Content\DataTables\images\sort_desc.png" />
+    <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\HomeCss.css" />
+    <Content Include="data1\images\collegestudentsstudyingonlawnclassmatesuniversity1068x713.jpg" />
+    <Content Include="data1\images\image1.jpg" />
+    <Content Include="data1\images\image2.jpg" />
+    <Content Include="data1\images\image3.jpg" />
+    <Content Include="data1\images\image4.jpg" />
+    <Content Include="data1\images\rs9466_2013_10_29_fall_sunrise_around_coe_complex_1440x400.jpg" />
+    <Content Include="data1\images\social_image.jpg" />
+    <Content Include="data1\images\systemicevaluation.jpg" />
+    <Content Include="data1\tooltips\collegestudentsstudyingonlawnclassmatesuniversity1068x713.jpg" />
+    <Content Include="data1\tooltips\image1.jpg" />
+    <Content Include="data1\tooltips\image2.jpg" />
+    <Content Include="data1\tooltips\image3.jpg" />
+    <Content Include="data1\tooltips\image4.jpg" />
+    <Content Include="data1\tooltips\rs9466_2013_10_29_fall_sunrise_around_coe_complex_1440x400.jpg" />
+    <Content Include="data1\tooltips\social_image.jpg" />
+    <Content Include="data1\tooltips\systemicevaluation.jpg" />
+    <Content Include="engine1\jquery.js" />
+    <Content Include="engine1\script.js" />
+    <Content Include="engine1\style.css" />
+    <Content Include="engine1\style.mod.css" />
+    <Content Include="engine1\wowslider.js" />
+    <Content Include="engine1\wowslider.mod.js" />
+    <Content Include="engine1\ws-ctrl-convex.svg" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\about-us-banner.jpg" />
+    <Content Include="Images\advance_image2.jpg" />
+    <Content Include="Images\ordinary_image2.jpg" />
+    <Content Include="Images\Schloar_image1.jpg" />
+    <Content Include="Images\Screen Shot 2019-08-07 at 6.39.14 PM.png" />
+    <Content Include="Images\student1.jpg" />
+    <Content Include="Images\s_image2.jpg" />
+    <Content Include="Images\unnamed.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\DataTables\css\mixins.scss" />
+    <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="bin\ProjectITP.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="engine1\ws-ctrl-convex.eot" />
+    <Content Include="engine1\ws-ctrl-convex.ttf" />
+    <Content Include="engine1\ws-ctrl-convex.woff" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.foundation.js" />
+    <Content Include="Scripts\DataTables\autoFill.foundation.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.jqueryui.js" />
+    <Content Include="Scripts\DataTables\autoFill.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\buttons.colVis.js" />
+    <Content Include="Scripts\DataTables\buttons.colVis.min.js" />
+    <Content Include="Scripts\DataTables\buttons.flash.js" />
+    <Content Include="Scripts\DataTables\buttons.flash.min.js" />
+    <Content Include="Scripts\DataTables\buttons.foundation.js" />
+    <Content Include="Scripts\DataTables\buttons.foundation.min.js" />
+    <Content Include="Scripts\DataTables\buttons.html5.js" />
+    <Content Include="Scripts\DataTables\buttons.html5.min.js" />
+    <Content Include="Scripts\DataTables\buttons.jqueryui.js" />
+    <Content Include="Scripts\DataTables\buttons.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\buttons.print.js" />
+    <Content Include="Scripts\DataTables\buttons.print.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.buttons.js" />
+    <Content Include="Scripts\DataTables\dataTables.buttons.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.foundation.js" />
+    <Content Include="Scripts\DataTables\dataTables.foundation.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.jqueryui.js" />
+    <Content Include="Scripts\DataTables\dataTables.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.material.js" />
+    <Content Include="Scripts\DataTables\dataTables.material.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.responsive.js" />
+    <Content Include="Scripts\DataTables\dataTables.responsive.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowReorder.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowReorder.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.select.js" />
+    <Content Include="Scripts\DataTables\dataTables.select.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.semanticui.js" />
+    <Content Include="Scripts\DataTables\dataTables.semanticui.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.uikit.js" />
+    <Content Include="Scripts\DataTables\dataTables.uikit.min.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\responsive.foundation.js" />
+    <Content Include="Scripts\DataTables\responsive.foundation.min.js" />
+    <Content Include="Scripts\DataTables\responsive.jqueryui.js" />
+    <Content Include="Scripts\DataTables\responsive.jqueryui.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\data1\images\collegestudentsstudyingonlawnclassmatesuniversity1068x713.jpg" />
+    <Content Include="Views\Home\data1\images\image1.jpg" />
+    <Content Include="Views\Home\data1\images\image2.jpg" />
+    <Content Include="Views\Home\data1\images\image3.jpg" />
+    <Content Include="Views\Home\data1\images\image4.jpg" />
+    <Content Include="Views\Home\data1\images\rs9466_2013_10_29_fall_sunrise_around_coe_complex_1440x400.jpg" />
+    <Content Include="Views\Home\data1\images\social_image.jpg" />
+    <Content Include="Views\Home\data1\images\systemicevaluation.jpg" />
+    <Content Include="Views\Home\data1\tooltips\collegestudentsstudyingonlawnclassmatesuniversity1068x713.jpg" />
+    <Content Include="Views\Home\data1\tooltips\image1.jpg" />
+    <Content Include="Views\Home\data1\tooltips\image2.jpg" />
+    <Content Include="Views\Home\data1\tooltips\image3.jpg" />
+    <Content Include="Views\Home\data1\tooltips\image4.jpg" />
+    <Content Include="Views\Home\data1\tooltips\rs9466_2013_10_29_fall_sunrise_around_coe_complex_1440x400.jpg" />
+    <Content Include="Views\Home\data1\tooltips\social_image.jpg" />
+    <Content Include="Views\Home\data1\tooltips\systemicevaluation.jpg" />
+    <Content Include="Views\Home\engine1\jquery.js" />
+    <Content Include="Views\Home\engine1\script.js" />
+    <Content Include="Views\Home\engine1\style.css" />
+    <Content Include="Views\Home\engine1\style.mod.css" />
+    <Content Include="Views\Home\engine1\wowslider.js" />
+    <Content Include="Views\Home\engine1\wowslider.mod.js" />
+    <Content Include="Views\Home\engine1\ws-ctrl-convex.svg" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\IndexForManager.cshtml" />
+    <Content Include="Views\Shared\_LoginPartialExtra.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Home\AdminDashboard.cshtml" />
+    <Content Include="Views\Student\HomeForStudentManagment.cshtml" />
+    <Content Include="Views\Student\StudentList.cshtml" />
+    <Content Include="Views\Account\About.cshtml" />
+    <Content Include="Views\Subjects\Create.cshtml" />
+    <Content Include="Views\Subjects\Delete.cshtml" />
+    <Content Include="Views\Subjects\Details.cshtml" />
+    <Content Include="Views\Subjects\Edit.cshtml" />
+    <Content Include="Views\Subjects\Index.cshtml" />
+    <Content Include="Views\Account\StudentUser.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Finance\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Account\AcadamicUser.cshtml" />
+    <Content Include="Views\Account\RegisterAcadamicEmployee.cshtml" />
+    <Content Include="Views\Account\EditAcadamicEmployee.cshtml" />
+    <Content Include="Views\Account\DeleteAcadamicEmployee.cshtml" />
+    <Content Include="Views\Classrooms\Create.cshtml" />
+    <Content Include="Views\Classrooms\Delete.cshtml" />
+    <Content Include="Views\Classrooms\Details.cshtml" />
+    <Content Include="Views\Classrooms\Edit.cshtml" />
+    <Content Include="Views\Classrooms\Index.cshtml" />
+    <Content Include="Views\Home\AdminDashboard - Copy.cshtml" />
+    <Content Include="Views\NonAcadamicEmployees\Create.cshtml" />
+    <Content Include="Views\NonAcadamicEmployees\Delete.cshtml" />
+    <Content Include="Views\NonAcadamicEmployees\Details.cshtml" />
+    <Content Include="Views\NonAcadamicEmployees\Edit.cshtml" />
+    <Content Include="Views\NonAcadamicEmployees\Index.cshtml" />
+    <Content Include="Views\UtilityBills\Create.cshtml" />
+    <Content Include="Views\UtilityBills\Delete.cshtml" />
+    <Content Include="Views\UtilityBills\Details.cshtml" />
+    <Content Include="Views\UtilityBills\Edit.cshtml" />
+    <Content Include="Views\UtilityBills\Index.cshtml" />
+    <Content Include="Views\Exams\Create.cshtml" />
+    <Content Include="Views\Exams\Delete.cshtml" />
+    <Content Include="Views\Exams\Details.cshtml" />
+    <Content Include="Views\Exams\Edit.cshtml" />
+    <Content Include="Views\Exams\Index.cshtml" />
+    <Content Include="Views\Materials\Create.cshtml" />
+    <Content Include="Views\Materials\Delete.cshtml" />
+    <Content Include="Views\Materials\Details.cshtml" />
+    <Content Include="Views\Materials\Edit.cshtml" />
+    <Content Include="Views\Materials\Index.cshtml" />
+    <Content Include="Views\SubjectFees\Create.cshtml" />
+    <Content Include="Views\SubjectFees\Delete.cshtml" />
+    <Content Include="Views\SubjectFees\Details.cshtml" />
+    <Content Include="Views\SubjectFees\Edit.cshtml" />
+    <Content Include="Views\SubjectFees\Index.cshtml" />
+    <Content Include="Views\TimeTables\Create.cshtml" />
+    <Content Include="Views\TimeTables\Delete.cshtml" />
+    <Content Include="Views\TimeTables\Details.cshtml" />
+    <Content Include="Views\TimeTables\Edit.cshtml" />
+    <Content Include="Views\TimeTables\Index.cshtml" />
+    <Content Include="Views\TimeTables\IndexReadOnly.cshtml" />
+    <Content Include="Views\Subjects\IndexReadOnly.cshtml" />
+    <Content Include="Views\Exams\IndexReadOnly.cshtml" />
+    <Content Include="Views\Materials\IndexReadOnly.cshtml" />
+    <Content Include="_aspnet_ProjectITP_20190812023820DataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820DataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\NonAcadamicPayments\Create.cshtml" />
+    <Content Include="Views\NonAcadamicPayments\Delete.cshtml" />
+    <Content Include="Views\NonAcadamicPayments\Details.cshtml" />
+    <Content Include="Views\NonAcadamicPayments\Edit.cshtml" />
+    <Content Include="Views\NonAcadamicPayments\Index.cshtml" />
+    <Content Include="Views\AcadamicUserPayments\Create.cshtml" />
+    <Content Include="Views\AcadamicUserPayments\Delete.cshtml" />
+    <Content Include="Views\AcadamicUserPayments\Details.cshtml" />
+    <Content Include="Views\AcadamicUserPayments\Edit.cshtml" />
+    <Content Include="Views\AcadamicUserPayments\Index.cshtml" />
+    <Content Include="Views\Profits\Create.cshtml" />
+    <Content Include="Views\Profits\Delete.cshtml" />
+    <Content Include="Views\Profits\Details.cshtml" />
+    <Content Include="Views\Profits\Edit.cshtml" />
+    <Content Include="Views\Profits\Index.cshtml" />
+    <Content Include="_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="Views\ExamResults\Create.cshtml" />
+    <Content Include="Views\ExamResults\Delete.cshtml" />
+    <Content Include="Views\ExamResults\Details.cshtml" />
+    <Content Include="Views\ExamResults\Edit.cshtml" />
+    <Content Include="Views\ExamResults\Index.cshtml" />
+    <Content Include="Views\ExamResults\IndexReadOnly.cshtml" />
+    <Content Include="Views\Notifications\Create.cshtml" />
+    <Content Include="Views\Notifications\Delete.cshtml" />
+    <Content Include="Views\Notifications\Details.cshtml" />
+    <Content Include="Views\Notifications\Edit.cshtml" />
+    <Content Include="Views\Notifications\Index.cshtml" />
+    <Content Include="Views\Notifications\IndexReadOnly.cshtml" />
+    <Content Include="Views\ExamManagemnt\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutGuest.cshtml" />
+    <Content Include="Views\Home\engine1\ws-ctrl-convex.eot" />
+    <Content Include="Views\Home\engine1\ws-ctrl-convex.ttf" />
+    <Content Include="Views\Home\engine1\ws-ctrl-convex.woff" />
+    <None Include="_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820AcadamicPaymentDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820AcadmicUserDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820ClassroomDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ClassroomDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820ClassroomDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820ClassroomDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820ClassroomDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ClassroomDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820DataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820DataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820StudentDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820StudentDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820ExamDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ExamDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820ExamDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820ExamDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820ExamDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ExamDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820ExamResultDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ExamResultDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820ExamResultDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820ExamResultDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820ExamResultDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ExamResultDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820NonAcadamicDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820ProfitDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ProfitDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820NonAcadamicPaymentDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820ProfitDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820ProfitDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820ProfitDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820ProfitDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820StudentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820StudentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820StudentDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820StudentDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820SubjectDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820SubjectDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820SubjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820SubjectDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820SubjectDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820SubjectDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820TimeTableDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820TimeTableDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820SubjectFeeDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820TimeTableDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820TimeTableDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820TimeTableDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820TimeTableDataSet.xsd</DependentUpon>
+    </Content>
+    <Content Include="_aspnet_ProjectITP_20190812023820UtilityDataSet.xsc">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820UtilityDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="_aspnet_ProjectITP_20190812023820UtilityDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_aspnet_ProjectITP_20190812023820UtilityDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="_aspnet_ProjectITP_20190812023820UtilityDataSet.xss">
+      <DependentUpon>_aspnet_ProjectITP_20190812023820UtilityDataSet.xsd</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="UploadFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908121209329_InitialCreate.resx">
+      <DependentUpon>201908121209329_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908121218029_seedUsers.resx">
+      <DependentUpon>201908121218029_seedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908121915502_AddIsNameToUser.resx">
+      <DependentUpon>201908121915502_AddIsNameToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908150652010_AddIsUserTypeModel.resx">
+      <DependentUpon>201908150652010_AddIsUserTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908150657267_AddIsUserIdToUser.resx">
+      <DependentUpon>201908150657267_AddIsUserIdToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908150723194_AddIsTelephoneNumberAndAddressToIdentityModel.resx">
+      <DependentUpon>201908150723194_AddIsTelephoneNumberAndAddressToIdentityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908150733500_SeedUserTypes.resx">
+      <DependentUpon>201908150733500_SeedUserTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908150853440_AddIsRequiredToUserTypeId.resx">
+      <DependentUpon>201908150853440_AddIsRequiredToUserTypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908150858434_seedUserTable.resx">
+      <DependentUpon>201908150858434_seedUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908151025422_RemovingUserTypesFromIdintityModel.resx">
+      <DependentUpon>201908151025422_RemovingUserTypesFromIdintityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908151028563_AddingUserTypesFromIdintityModel.resx">
+      <DependentUpon>201908151028563_AddingUserTypesFromIdintityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908151031046_AddingUserTypesFromIdintityModel1.resx">
+      <DependentUpon>201908151031046_AddingUserTypesFromIdintityModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908162058400_AddIsUserIdToUser1.resx">
+      <DependentUpon>201908162058400_AddIsUserIdToUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908162134409_AddIsUserIdToUser2.resx">
+      <DependentUpon>201908162134409_AddIsUserIdToUser2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908162136205_Add.resx">
+      <DependentUpon>201908162136205_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908171300251_AddIsDone.resx">
+      <DependentUpon>201908171300251_AddIsDone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908171642053_test.resx">
+      <DependentUpon>201908171642053_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908171754482_AddIsUserTypesToIdentityModel.resx">
+      <DependentUpon>201908171754482_AddIsUserTypesToIdentityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908251247052_addIsSubjectModel.resx">
+      <DependentUpon>201908251247052_addIsSubjectModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908281249531_AddIsSubjectFeeModel.resx">
+      <DependentUpon>201908281249531_AddIsSubjectFeeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908282209205_AddMaterialTypeModel.resx">
+      <DependentUpon>201908282209205_AddMaterialTypeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291227056_AddIsRequiredAnootationsToSubjectModel.resx">
+      <DependentUpon>201908291227056_AddIsRequiredAnootationsToSubjectModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291306148_AddIsRegularExperssionForEnrolmentKeyInSubject.resx">
+      <DependentUpon>201908291306148_AddIsRegularExperssionForEnrolmentKeyInSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291320020_AddIsDataAnotationsToSubjectModel.resx">
+      <DependentUpon>201908291320020_AddIsDataAnotationsToSubjectModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908271128463_AddChanurisClass.resx">
+      <DependentUpon>201908271128463_AddChanurisClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291526029_29th 1st correction is done.resx">
+      <DependentUpon>201908291526029_29th 1st correction is done.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291536579_RemoveRegularExperssionForSubject.resx">
+      <DependentUpon>201908291536579_RemoveRegularExperssionForSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291650253_AddIsNonAcadamicModel.resx">
+      <DependentUpon>201908291650253_AddIsNonAcadamicModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291701483_AddIsModifiedTimeTable.resx">
+      <DependentUpon>201908291701483_AddIsModifiedTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291741202_addIsClassroomModel.resx">
+      <DependentUpon>201908291741202_addIsClassroomModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291750178_addIsUtilityBillsModel.resx">
+      <DependentUpon>201908291750178_addIsUtilityBillsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908291925292_addIsRequiredToAllTheAttibutesInAllModels.resx">
+      <DependentUpon>201908291925292_addIsRequiredToAllTheAttibutesInAllModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909030811437_DeleteTheExamClass.resx">
+      <DependentUpon>201909030811437_DeleteTheExamClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909030837575_addIsSubjectCategoryModel.resx">
+      <DependentUpon>201909030837575_addIsSubjectCategoryModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909030911201_AddExamModel.resx">
+      <DependentUpon>201909030911201_AddExamModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909031153392_removeMaterialModel.resx">
+      <DependentUpon>201909031153392_removeMaterialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909031156287_AddMaterialModel2ndTime.resx">
+      <DependentUpon>201909031156287_AddMaterialModel2ndTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909031725230_AddIsSubjectTypeAndApplicationUserModelToSubject.resx">
+      <DependentUpon>201909031725230_AddIsSubjectTypeAndApplicationUserModelToSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909031904443_updateSubjectFeeModel.resx">
+      <DependentUpon>201909031904443_updateSubjectFeeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909040751487_removeTeacherNameFromSubject.resx">
+      <DependentUpon>201909040751487_removeTeacherNameFromSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909040951597_removeRequiredOptionfromTimeTableModel.resx">
+      <DependentUpon>201909040951597_removeRequiredOptionfromTimeTableModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909042040025_AddIsStudentSubjectEnrollmentModel.resx">
+      <DependentUpon>201909042040025_AddIsStudentSubjectEnrollmentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909042045126_AddIsRemoveApplicationUserFromStudentSubjectEnrollmentModel.resx">
+      <DependentUpon>201909042045126_AddIsRemoveApplicationUserFromStudentSubjectEnrollmentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909050655012_AddIsAllSetToPushToBackUpSajeewa.resx">
+      <DependentUpon>201909050655012_AddIsAllSetToPushToBackUpSajeewa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909240953348_AddIsMonthAndYearPropertiesToUtilityBillsModel.resx">
+      <DependentUpon>201909240953348_AddIsMonthAndYearPropertiesToUtilityBillsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241125174_AddIsAcadamicUserPaymentModel.resx">
+      <DependentUpon>201909241125174_AddIsAcadamicUserPaymentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241128523_changeAcadamicUserPaymnetModel.resx">
+      <DependentUpon>201909241128523_changeAcadamicUserPaymnetModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241132327_RemoveRequiredIdFromAcadamicUserPaymnetModel.resx">
+      <DependentUpon>201909241132327_RemoveRequiredIdFromAcadamicUserPaymnetModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241137536_AddNonAcadamicPaymentModel.resx">
+      <DependentUpon>201909241137536_AddNonAcadamicPaymentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241140224_AddPaymentAttributeToNonAcadamicPaymentModel.resx">
+      <DependentUpon>201909241140224_AddPaymentAttributeToNonAcadamicPaymentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241204330_ChangePaymentDataTypeToDoubleInAcadamicUserPaymment.resx">
+      <DependentUpon>201909241204330_ChangePaymentDataTypeToDoubleInAcadamicUserPaymment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241208479_RemoveApllicationUserForeignKeyFromAcadamicUserPaymentModel.resx">
+      <DependentUpon>201909241208479_RemoveApllicationUserForeignKeyFromAcadamicUserPaymentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241213118_AgainAddApllicationUserForeignKeyToAcadamicUserPaymentModel.resx">
+      <DependentUpon>201909241213118_AgainAddApllicationUserForeignKeyToAcadamicUserPaymentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241238216_FinalAcadamicEmployeePaymentModel.resx">
+      <DependentUpon>201909241238216_FinalAcadamicEmployeePaymentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241557392_AddProfitModel.resx">
+      <DependentUpon>201909241557392_AddProfitModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909241615414_AddMonthlyIncomeProprtyToProfitModel.resx">
+      <DependentUpon>201909241615414_AddMonthlyIncomeProprtyToProfitModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909251600243_CreateExamResultModel.resx">
+      <DependentUpon>201909251600243_CreateExamResultModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909251731228_AddNotificationModel.resx">
+      <DependentUpon>201909251731228_AddNotificationModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909260607366_AddValidationToExamResultsModel.resx">
+      <DependentUpon>201909260607366_AddValidationToExamResultsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909260611217_removeRequiredFromResultPdfOfExamResultModel.resx">
+      <DependentUpon>201909260611217_removeRequiredFromResultPdfOfExamResultModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909260619211_AddValidationToNonAcadamicPaymentsModel.resx">
+      <DependentUpon>201909260619211_AddValidationToNonAcadamicPaymentsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909260626151_AddValidationToExamModel.resx">
+      <DependentUpon>201909260626151_AddValidationToExamModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911271814459_startnew.resx">
+      <DependentUpon>201911271814459_startnew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AcadamicPaymentReport.rdlc" />
+    <EmbeddedResource Include="Reports\AcadamicUserReport.rdlc" />
+    <EmbeddedResource Include="Reports\ClassroomReport.rdlc" />
+    <EmbeddedResource Include="Reports\ExamReport.rdlc" />
+    <EmbeddedResource Include="Reports\ExamResultReport.rdlc" />
+    <EmbeddedResource Include="Reports\MaterialReport.rdlc" />
+    <EmbeddedResource Include="Reports\NonAcadamicPaymentReport.rdlc" />
+    <EmbeddedResource Include="Reports\NonAcadamicReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProfitReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StudentReport.rdlc" />
+    <EmbeddedResource Include="Reports\SubjectFeeReport.rdlc" />
+    <EmbeddedResource Include="Reports\SubjectReport.rdlc" />
+    <EmbeddedResource Include="Reports\TimeTableReport.rdlc" />
+    <EmbeddedResource Include="Reports\UtilityReport.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54312</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54312/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

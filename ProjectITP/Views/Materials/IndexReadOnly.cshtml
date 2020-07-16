@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ProjectITP.Models.Material>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2 style="font-family:fantasy">Home For Material</h2>
+
+
+<table id ="material" class="table table-hover table-bordered">
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.MaterialTypes.type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teacher)
+            </th>
+            
+            <th>
+               Download
+            </th>
+            
+        </tr>
+
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            if (item.MaterialTypes.id == 1)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MaterialTypes.type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Subject.enrollmentKey)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.teacher)
+                    </td>
+                    
+                    <td>
+                        <a href="~/Images/@item.materialURL"> @Html.DisplayFor(modelItem => item.materialURL)</a>
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+
+</table>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#material").DataTable();
+
+        });
+    </script>
+
+
+}
+

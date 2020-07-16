@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProjectITP.Models.ExamResult>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-family:fantasy">Exam Result</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "ExamResults", new { @class = "btn btn-success" })
+</p>
+
+
+<hr />
+
+@Html.ActionLink("Export To Excel", "Reports", new { ReportType = "Excel" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Pdf", "Reports", new { ReportType = "Pdf" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To word", "Reports", new { ReportType = "Word" }, new { @class = "btn btn-primary" }) |
+@Html.ActionLink("Export To Image", "Reports", new { ReportType = "Image" }, new { @class = "btn btn-primary" }) |
+
+<hr />
+
+<table id="ExamResult" class="table table-hover table-bordered">
+    <thead>
+        <tr class="bg-primary">
+            <th>
+                @Html.DisplayNameFor(model => model.Subject.enrollmentKey)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resultpdf)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Subject.enrollmentKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    <a href="~/Images/@item.Resultpdf">@Html.DisplayFor(modelItem => item.Resultpdf)</a>
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            var table = $("#ExamResult").DataTable();
+
+        });
+    </script>
+
+
+}
